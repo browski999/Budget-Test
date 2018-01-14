@@ -62,7 +62,7 @@ namespace DotNetAppSqlDb.Controllers
 
             Transaction transaction = db.Transactions.Find(id);
 
-            if (transaction == null)
+            if (transaction != null)
             {
                 return HttpNotFound();
             }
